@@ -28,13 +28,13 @@ def calculate(first_num,second_num,operation):
     return  result
 
 recent_result = []
-start = int(input("Enter your first number?: "))
+start = float(input("Enter your first number?: "))
 carry_on = True
 
 
 while carry_on:
     operand = input('Choose an operation: "+","-", "*","/": ')
-    next_num = int(input("Enter your next num: "))
+    next_num = float(input("Enter your next num: "))
     final_result =  calculate(first_num=start,second_num=next_num,operation=operand)
     recent_result.append(final_result)
     print(f"{start} {operand} {next_num} = {final_result}")
@@ -47,4 +47,4 @@ while carry_on:
         start = recent_result[-1]
     if proceed == "n":
         recent_result = []
-        start = int(input("Enter your first number?: "))
+        start = float(input("Enter your first number?: "))
