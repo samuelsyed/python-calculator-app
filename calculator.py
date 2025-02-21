@@ -28,7 +28,6 @@ def calculate(first_num,second_num,operation):
     return  result
 
 def main():
-    recent_result = []
     start = float(input("Enter your first number?: "))
     carry_on = True
 
@@ -37,13 +36,11 @@ def main():
         operand = input('Choose an operation: "+","-", "*","/": ')
         next_num = float(input("Enter your next num: "))
         final_result =  calculate(first_num=start,second_num=next_num,operation=operand)
-        recent_result.append(final_result)
         print(f"{start} {operand} {next_num} = {final_result}")
         proceed = input(f"Type 'y' to continue calculating with {final_result} : or type 'n' to start a new calculation: ").lower()
         if proceed == "y":
-            start = recent_result[-1]
+            start = final_result
         if proceed == "n":
-            recent_result = []
             start = float(input("Enter your first number?: "))
 
 
