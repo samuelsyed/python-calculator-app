@@ -1,6 +1,3 @@
-from email.charset import add_alias
-from site import addsitedir
-
 from art import logo
 print(logo)
 
