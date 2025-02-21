@@ -41,10 +41,6 @@ def main():
         print(f"{start} {operand} {next_num} = {final_result}")
         proceed = input(f"Type 'y' to continue calculating with {final_result} : or type 'n' to start a new calculation: ").lower()
         if proceed == "y":
-            if len(recent_result) == 1:
-                index = 0
-            else:
-                index = -1
             start = recent_result[-1]
         if proceed == "n":
             recent_result = []
